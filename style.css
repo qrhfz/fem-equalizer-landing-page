@@ -1,0 +1,165 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+:root {
+    --clr-white: hsl(20, 33%, 98%);
+    --clr-black: hsl(244, 23%, 12%);
+
+    --clr-orange: hsl(12, 94%, 65%);
+    --clr-yellow: hsl(33, 100%, 70%);
+    --clr-cyan: hsl(177, 68%, 64%);
+
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* background */
+
+body {
+    background-image: url(assets/bg-main-mobile.png);
+    background-position: 40vw -100px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width:480px) {
+    body {
+        background-image: url(assets/bg-main-tablet.png);
+        background-position: -200px -100px;
+        background-size: 100vw auto;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    body {
+        background-image: url(assets/bg-main-desktop.png);
+        background-position: -200px -100px;
+        background-size: 100vw auto;
+    }
+}
+
+/* typography */
+
+:root {
+    --fs-xl: 40px;
+    --lh-xl: 48px;
+    --ls-xl: -0.45px;
+
+    --fs-lg: 32px;
+    --lh-lg: 40px;
+
+    --fs-md: 18px;
+    --lh-md: 28px;
+
+    --fs-sm: 16px;
+    --lh-sm: 26px;
+}
+
+@media screen and (min-width:480px) {
+    :root {
+        --fs-xl: 64px;
+        --lh-xl: 64px;
+        --ls-xl: -0.73px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    :root {
+        --fs-xl: 88px;
+        --lh-xl: 88px;
+        --ls-xl: -1px;
+
+        --fs-lg: 40px;
+        --lh-lg: 52px;
+
+        --fs-md: 20px;
+        --lh-md: 34px;
+
+        --fs-sm: 16px;
+        --lh-sm: 26px;
+    }
+}
+
+h1 {
+    font-size: var(--fs-xl);
+    line-height: var(--lh-xl);
+    letter-spacing: var(--ls-xl);
+    font-weight: bold;
+}
+
+h2 {
+    font-size: var(--fs-lg);
+    line-height: var(--lh-lg);
+    font-weight: bold;
+}
+
+p,
+.text-body-1 {
+    font-size: var(--fs-md);
+    line-height: var(--lh-md);
+}
+
+.text-body-2 {
+    font-size: var(--fs-sm);
+    line-height: var(--lh-sm);
+}
+
+/* buttons */
+.btn {
+    padding-block: 1em;
+    width: 100%;
+    border-radius: 0.66em;
+    border: none;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: bold;
+}
+
+.btn-ios {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+
+}
+
+.btn-ios::before {
+    content: url(assets/icon-apple.svg);
+}
+
+.btn-ios:hover {
+    background-color: var(--clr-cyan);
+}
+
+.btn-android {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+}
+
+.btn-android::before {
+    content: url(assets/icon-android.svg);
+}
+
+.btn-android:hover {
+    background-color: var(--clr-yellow);
+}
+
+/* components */
+header {
+    padding-top: 2.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+.container {
+    max-width: 70rem;
+    margin-inline: auto;
+}
+
+.headline {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-flow: column;
+
+}
+
+.pattern {
+    position: absolute;
+}
