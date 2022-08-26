@@ -112,6 +112,7 @@ p,
     font-size: 18px;
     line-height: 32px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn-ios {
@@ -142,26 +143,50 @@ p,
 }
 
 /* components */
+.container {
+    max-width: 70rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+@media screen and (min-width:1024px) {
+    .container {
+        padding-inline: 0;
+    }
+}
+
+
 .section-1 {
     margin-bottom: 10rem;
 }
 
-header {
-    padding-top: 2.5rem;
-    padding-left: 1.5rem;
-    padding-bottom: 4rem;
+@media screen and (min-width:480px) {
+    .section-1 {
+        margin-bottom: 15.625rem;
+    }
 }
 
-.container {
-    max-width: 70rem;
-    margin-inline: auto;
+@media screen and (min-width:1024px) {
+    .section-1 {
+        margin-bottom: 20rem;
+    }
+}
+
+header {
+    padding-block: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width:480px) {
+    header {
+        margin-bottom: 4.5rem;
+    }
 }
 
 .headline {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-auto-flow: column;
-    padding: 1.5rem;
 }
 
 .headline h1 {
@@ -176,25 +201,28 @@ header {
     .pattern {
         display: block;
         position: absolute;
-        top: -4rem;
-        right: 0%;
-        width: 29.25rem;
-        height: auto;
+        top: -2rem;
+        right: 0;
         z-index: -1;
+        height: 25rem;
+        width: auto;
     }
 
 }
-
-/* .section-2 {
-
-    
-} */
 
 @media screen and (min-width:480px) {
     .section-2 {
-        padding-inline: 2.25rem;
+        margin-bottom: 5.4rem;
     }
 }
+
+@media screen and (min-width:480px) {
+    .section-2 {
+        margin-bottom: 12.625rem;
+    }
+}
+
+
 
 .hero {
     background-color: var(--clr-black);
@@ -206,24 +234,67 @@ header {
 
 }
 
+@media screen and (min-width:480px) {
+    .hero {
+        background-size: 35%;
+    }
+}
+
+
+
 .hero-image {
     position: relative;
     top: -100px;
     margin-inline: auto;
-
-    padding-inline: 5.375rem;
+    width: 13rem;
 }
 
 .orange-box {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    justify-content: space-between;
     background-color: var(--clr-orange);
     padding-block: 3rem;
     padding-inline: 2rem;
     color: var(--clr-white);
     border-radius: 1rem;
+}
+
+@media screen and (min-width:480px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-image {
+        width: 16.875rem;
+        height: auto;
+        top: -8.625rem;
+        padding-inline: 0;
+        left: 4rem;
+    }
+
+    .orange-box {
+        right: 3.625rem;
+        bottom: -6rem;
+        max-width: 25rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .hero-image {
+        width: 19.5rem;
+        top: -13.3125rem;
+        left: 0;
+    }
+
+    .orange-box {
+        max-width: 27.875rem;
+        bottom: -7.2rem;
+        right: 0;
+    }
 }
 
 .pricing>* {
@@ -236,41 +307,75 @@ header {
     font-weight: bold;
 }
 
+
+footer {
+    padding-block: 4rem;
+    display: grid;
+    grid-auto-flow: row;
+}
+
+
 .logo-bottom {
     margin-bottom: 2rem;
 }
 
-footer {
-    padding-block: 4rem;
-    padding-inline: 1.5rem;
-
-}
-
-.company-info {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    justify-content: space-between;
-}
-
-@media screen and (min-width:480px) {
-
-    .company-info {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .company-info div:first-child {
-        max-width: 23rem;
-    }
-
-}
-
 .social-media {
+    margin-top: 4rem;
     list-style: none;
     padding: 0;
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+.social-media a {
+    cursor: pointer;
+}
+
+.social-media a:hover svg path {
+    fill: var(--clr-orange);
+}
+
+@media screen and (min-width:480px) {
+    footer {
+        grid-template:
+            "a a a" auto
+            "b e c" auto/2fr 3fr 100px;
+        ;
+    }
+
+    .company-info {
+        grid-area: b;
+    }
+
+    .logo-bottom {
+        grid-area: a;
+    }
+
+    .social-media {
+        grid-area: c;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    footer {
+        grid-template:
+            "a b e c" auto / 1.5fr 2fr 1fr 100px;
+
+
+    }
+
+    .company-info {
+        grid-area: b;
+    }
+
+    .logo-bottom {
+        grid-area: a;
+    }
+
+    .social-media {
+        margin-top: 0;
+        grid-area: c;
+        align-self: center;
+    }
 }
