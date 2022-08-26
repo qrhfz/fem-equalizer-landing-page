@@ -185,22 +185,60 @@ header {
 
 }
 
-
-
-.orange-box {
-    background-color: var(--clr-orange);
-    padding: 3.375rem;
-    color: var(--clr-white);
+.section-2 {
+    background-color: var(--clr-black);
+    background-image: url(assets/bg-pattern-2.svg);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    margin-bottom: 1rem;
 }
 
 .hero {
-    background-color: var(--clr-black);
-    /* padding: 7rem; */
-}
-
-.hero>img {
     position: relative;
     top: -100px;
-    width: 13rem;
+    padding-inline: 5rem;
     margin-inline: auto;
+}
+
+.orange-box {
+    position: relative;
+    bottom: -1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--clr-orange);
+    padding-block: 3rem;
+    padding-inline: 2rem;
+    color: var(--clr-white);
+    border-radius: 1rem;
+}
+
+.pricing>* {
+    vertical-align: middle;
+}
+
+.price-number {
+    font-size: var(--fs-xl);
+    line-height: var(--lh-xl);
+    font-weight: bold;
+}
+
+.logo-bottom {
+    margin-bottom: 2rem;
+}
+
+footer {
+    padding-block: 4rem;
+    padding-inline: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
 }
