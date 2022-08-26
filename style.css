@@ -142,6 +142,10 @@ p,
 }
 
 /* components */
+.section-1 {
+    margin-bottom: 10rem;
+}
+
 header {
     padding-top: 2.5rem;
     padding-left: 1.5rem;
@@ -157,9 +161,46 @@ header {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-auto-flow: column;
+    padding: 1.5rem;
+}
 
+.headline h1 {
+    margin-bottom: 2.5rem;
 }
 
 .pattern {
-    position: absolute;
+    display: none;
+}
+
+@media screen and (min-width:480px) {
+    .pattern {
+        display: block;
+        position: absolute;
+        top: -4rem;
+        right: 0%;
+        width: 29.25rem;
+        height: auto;
+        z-index: -1;
+    }
+
+}
+
+
+
+.orange-box {
+    background-color: var(--clr-orange);
+    padding: 3.375rem;
+    color: var(--clr-white);
+}
+
+.hero {
+    background-color: var(--clr-black);
+    /* padding: 7rem; */
+}
+
+.hero>img {
+    position: relative;
+    top: -100px;
+    width: 13rem;
+    margin-inline: auto;
 }
